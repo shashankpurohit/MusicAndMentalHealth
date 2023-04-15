@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+          <img src="https://img.freepik.com/free-vector/gradient-mental-health-logo-template_23-2148820569.jpg?w=2000" class="logo">
+
+          <form action="{{url_for('result')}}" method="post">
+            <div class="formbold-input-group">
+              <label for="age" class="formbold-form-label"> Age: </label>
+              <input
+                type="number"
+                name="age"
+                id="age"
+                placeholder="Enter your age:"
+                class="formbold-form-input"
+              />
+            </div>
+
+            <div class="formbold-input-group">
+                <label for="hours" class="formbold-form-label"> Hours Per Day: </label>
+                <input
+                  type="number"
+                  name="hours"
+                  id="hours"
+                  placeholder="Enter the hours:"
+                  class="formbold-form-input"
+                />
+              </div>
+      
+
+            <div class="formbold-input-radio-wrapper">
+              <label for="ans" class="formbold-form-label">
+                Listening music while working?:
+            </label>
+              <div class="formbold-radio-flex">
+                <div class="formbold-radio-group">
+                  <label class="formbold-radio-label">
+                    <input
+                      class="formbold-input-radio"
+                      type="radio"
+                      name="ans"
+                      id="ans"
+                      value="1"
+                    />
+                    Yes
+                    <span class="formbold-radio-checkmark"></span>
+                  </label>
+                </div>
+      
+                <div class="formbold-radio-group">
+                  <label class="formbold-radio-label">
+                    <input
+                      class="formbold-input-radio"
+                      type="radio"
+                      name="ans"
+                      id="ans"
+                      value="0"
+                    />
+                    No
+                    <span class="formbold-radio-checkmark"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          
+            <div class="formbold-input-group">
+                <label for="BPM" class="formbold-form-label">BPM(beats per minute): </label>
+                <input
+                  type="number"
+                  name="bpm"
+                  id="bpm"
+                  placeholder="Enter BPM:"
+                  class="formbold-form-input"
+                />
+            </div>
+
+            <div class="formbold-input-group">
+                <label class="formbold-form-label">
+                  Choose a Genre:
+                </label>
+                <select class="formbold-form-select" name="fav_genre" >
+                    <option value="">--Please choose an option--</option>
+                    <option value="0">Video game music</option>
+                    <option value="1">Jazz</option>
+                    <option value="2">R&B</option>
+                    <option value="3">K pop</option>
+                    <option value="4">Rock</option>
+                    <option value="5">EDM</option>
+                    <option value="6">Country</option>
+                    <option value="7">Hip hop</option>
+                    <option value="8">Rap</option>
+                    <option value="9">Pop</option>
+                    <option value="10">Classical</option>
+                    <option value="11">Metal</option>
+                    <option value="12">Folk</option>
+                    <option value="13">Lofi</option>
+                    <option value="14">Gospel</option>
+                    <option value="15">Latin</option>
+                </select>
+            </div>
+
+            
+            <div class="formbold-input-group">
+                <label class="formbold-form-label">
+                    How frequent do you listen Classical Songs :
+                </label>
+                <select class="formbold-form-select" name="classical" >
+                        <option value="">--Please choose an option--</option>
+                        <option value="0">Never</option>
+                        <option value="1">Sometimes</option>
+                        <option value="2">Rarely</option>
+                        <option value="3">Very frequently</option>
+                </select>
+            </div>
+
+            <div class="formbold-input-group">
+                <label class="formbold-form-label">
+                    How frequent do you listen Country songs:
+                </label>
+                <select class="formbold-form-select" name="country" >
+                        <option value="">--Please choose an option--</option>
+                        <option value="0">Never</option>
+                        <option value="1">Sometimes</option>
+                        <option value="3">Rarely</option>
+                        <option value="2">Very frequently</option>
+                </select>
+            </div>
+
+            <div class="formbold-input-group">
+                <label class="formbold-form-label">
+                 How frequent do you listen EDM songs:
+                </label>
+                <select class="formbold-form-select" name="edm" >
+                        <option value="">--Please choose an option--</option>
+                        <option value="1">Never</option>
+                        <option value="3">Sometimes</option>
+                        <option value="2">Rarely</option>
+                        <option value="0">Very frequently</option>
+                </select>
+            </div>
+
+            <div class="formbold-input-group">
+                <label class="formbold-form-label">
+                   How frequent do you listen Folk song:
+                </label>
+                <select class="formbold-form-select" name="folk" >
+                        <option value="">--Please choose an option--</option>
+                        <option value="0">Never</option>
+                        <option value="2">Sometimes</option>
+                        <option value="1">Rarely</option>
+                        <option value="3">Very frequently</option>
+                </select>
+            </div>
+
+            <div class="formbold-input-group">
+                <label class="formbold-form-label">
+                   how frequent do you listen Gospel songs:
+                </label>
+                <select class="formbold-form-select" name="gospel" >
+                        <option value="">--Please choose an option--</option>
+                        <option value="0">Never</option>
+                        <option value="1">Sometimes</option>
+                        <option value="2">Rarely</option>
+                        <option value="3">Very frequently</option>
+                </select>
+            </div>
+
+            <div class="formbold-input-group">
+                <label class="formbold-form-label">
+                   How frequent do you listen Hip Hop songs:
+                </label>
+                <select class="formbold-form-select" name="hip-hop" >
+                        <option value="">--Please choose an option--</option>
+                        <option value="1">Never</option>
+                        <option value="3">Sometimes</option>
+                        <option value="0">Rarely</option>
+                        <option value="2">Very frequently</option>
+                </select>
+            </div>
+
+            <div class="formbold-input-group">
+                <label class="formbold-form-label">
+                   How frequent do you listen Jazz songs:
+                </label>
+                <select class="formbold-form-select" name="jazz" >
+                        <option value="">--Please choose an option--</option>
+                        <option value="2">Never</option>
+                        <option value="3">Sometimes</option>
+                        <option value="0">Rarely</option>
+                        <option value="1">Very frequently</option>
+                </select>
+            </div>
+
+            <div class="formbold-input-group">
+                <label class="formbold-form-label">
+                   How frequent do you listen K pop songs:
+                </label>
+                <select class="formbold-form-select" name="k-pop" >
+                        <option value="">--Please choose an option--</option>
+                        <option value="2">Never</option>
+                        <option value="1">Sometimes</option>
+                        <option value="3">Rarely</option>
+                        <option value="0">Very frequently</option>
+                </select>
+            </div>
+
+            <div class="formbold-input-group">
+                <label class="formbold-form-label">
+                   How frequent do you listen Latin songs:
+                </label>
+                <select class="formbold-form-select" name="latin" >
+                        <option value="">--Please choose an option--</option>
+                        <option value="0">Never</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Rarely</option>
+                        <option value="1">Very frequently</option>
+                </select>
+            </div>
+
+            <div class="formbold-input-group">
+                <label class="formbold-form-label">
+                   How frequent do you listen Lofi songs:
+                </label>
+                <select class="formbold-form-select" name="lofi" >
+                        <option value="">--Please choose an option--</option>
+                        <option value="3">Never</option>
+                        <option value="0">Sometimes</option>
+                        <option value="2">Rarely</option>
+                        <option value="1">Very frequently</option>
+                </select>
+            </div>
+
+            <div class="formbold-input-group">
+                <label class="formbold-form-label">
+                   How frequent do you listen Metal songs:
+                </label>
+                <select class="formbold-form-select" name="metal" >
+                        <option value="">--Please choose an option--</option>
+                        <option value="1">Never</option>
+                        <option value="0">Sometimes</option>
+                        <option value="2">Rarely</option>
+                        <option value="3">Very frequently</option>
+                </select>
+            </div>
+
+            <div class="formbold-input-group">
+                <label class="formbold-form-label">
+                   How frequent do you losten Pop songs:
+                </label>
+                <select class="formbold-form-select" name="pop" >
+                        <option value="">--Please choose an option--</option>
+                        <option value="3">Never</option>
+                        <option value="1">Sometimes</option>
+                        <option value="0">Rarely</option>
+                        <option value="2">Very frequently</option>
+                </select>
+            </div>
+
+            <div class="formbold-input-group">
+                <label class="formbold-form-label">
+                   How frequent do you listen R&B songs:
+                </label>
+                <select class="formbold-form-select" name="r&b" >
+                        <option value="">--Please choose an option--</option>
+                        <option value="0">Never</option>
+                        <option value="1">Sometimes</option>
+                        <option value="3">Rarely</option>
+                        <option value="2">Very frequently</option>
+                </select>
+            </div>
+
+            <div class="formbold-input-group">
+                <label class="formbold-form-label">
+                   How frequent do you listen Rap songs:
+                </label>
+                <select class="formbold-form-select" name="rap" >
+                        <option value="">--Please choose an option--</option>
+                        <option value="1">Never</option>
+                        <option value="3">Sometimes</option>
+                        <option value="0">Rarely</option>
+                        <option value="2">Very frequently</option>
+                </select>
+            </div>
+
+            <div class="formbold-input-group">
+                <label class="formbold-form-label">
+                   How frequent do you listen Rock songs:
+                </label>
+                <select class="formbold-form-select" name="rock" >
+                        <option value="">--Please choose an option--</option>
+                        <option value="1">Never</option>
+                        <option value="3">Sometimes</option>
+                        <option value="0">Rarely</option>
+                        <option value="2">Very frequently</option>
+                </select>
+            </div>
+
+            <div class="formbold-input-group">
+                <label class="formbold-form-label">
+                   How frequent do you listen Video game music:
+                </label>
+                <select class="formbold-form-select" name="video-game-music" >
+                        <option value="">--Please choose an option--</option>
+                        <option value="1">Never</option>
+                        <option value="3">Sometimes</option>
+                        <option value="2">Rarely</option>
+                        <option value="0">Very frequently</option>
+                </select>
+            </div>
+
+        
+            <div class="formbold-input-group">
+                <label class="formbold-form-label">
+                    Enter your Anxiety Level:
+                </label>
+                <select class="formbold-form-select" name="anxiety" >
+                    <option value="">--Please choose an option--</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+
+           
+            <div class="formbold-input-group">
+                <label class="formbold-form-label">
+                   Enter your Depression level:
+                </label>
+                <select class="formbold-form-select" name="depression" >
+                    <option value="">--Please choose an option--</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+
+            <div class="formbold-input-group">
+                <label class="formbold-form-label">
+                   Enter your Insomnia level:
+                </label>
+                <select class="formbold-form-select" name="insomnia" >
+                    <option value="">--Please choose an option--</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+
+            <div class="formbold-input-group">
+                <label class="formbold-form-label">
+                    Enter your OCD level:
+                </label>
+                <select class="formbold-form-select" name="ocd" >
+                    <option value="">--Please choose an option--</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+    
+          <button type="submit" class="formbold-btn">Submit</button>
+        </form>
+      </div>
+    </div>
+</body>
+</html>

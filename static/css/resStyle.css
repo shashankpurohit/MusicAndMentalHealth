@@ -1,0 +1,61 @@
+.header{
+    color:white;
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 2px;
+    text-align: center;
+    margin: 40px auto;
+    font-size: 3.5rem;
+}
+body{
+    background: linear-gradient(248.6deg, rgb(254, 99, 132) 0%, rgb(49, 52, 56) 99.8%);
+}
+.res{
+    color: aqua;
+    font-size: 80px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.floating {  
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 25px;
+    margin-right: 25px;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
+}
+
+.wrapper.two {
+    margin-top: 100px auto;
+    width: 40%;
+    font-size: 6rem;
+    font-family: "Play", sans-serif;
+    position: absolute;
+    top:300px;
+    left:500px;
+}
+.neon h3 {
+    margin: 1rem auto;
+    animation: neon 1s ease infinite;
+    text-align: center;
+}
+@keyframes neon {
+    0%,
+    100% {
+        text-shadow: 0 0 10px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 2px #fed128, 2px 2px 2px #806914;
+        color: #f5efcb;
+    }
+    50% {
+        text-shadow: 0 0 2px #800e0b, 0 0 5px #800e0b, 0 0 5px #800e0b, 0 0 5px #800e0b, 0 0 2px #800e0b, 4px 4px 2px #40340a;
+        color: #eda0d3;
+    }
+}
